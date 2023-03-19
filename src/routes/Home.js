@@ -1,6 +1,7 @@
 
 import {useState, useEffect} from "react";
 import Movie from "../components/Movie";
+import styles from "./Home.module.css";
 
 function Home(){
     const [loading, setLoading] = useState(true); //when running setLoading function the function App() component will run again 
@@ -20,15 +21,18 @@ function Home(){
   
     //if not loading we show the movies and we muse map() to do it 
     return (
-      <div> 
-      {loading ? (<h1>Loading...</h1>)
+      <div className = {styles.container}> 
+      {loading ? (<div className={styles.loader}>
+          <span>Loading...</span>
+        </div>)
       : (
-      <div>
+      <div className={styles.movies}>
         {movies.map( (movie) => (
           <Movie
             key = {movie.id}
             coverImg={movie.medium_cover_image} 
             title = {movie.title} 
+            year = {movie.year}
             summary = {movie.summary}
             genres = {movie.genres}
             id = {movie.id}
