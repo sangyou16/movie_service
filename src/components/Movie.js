@@ -11,7 +11,7 @@ function Movie({coverImg,title,summary,genres,id,year}){ // line 9.. now when it
         <Link to = {`/movie/${id}`}>{title}</Link>
       </h2> 
     <h3 className = {styles.movie__year}>{year}</h3>
-    <p>{summary.length > 235 ? `${summary.slice(0,235)}...` :summary }</p>
+    <p>{summary.length > 200 ? `${summary.slice(0, 200)}...` :summary }</p>
     <ul className = {styles.movie__genres}>
       {genres.map((g) => (<li key = {genres}>{g}</li>))} 
     </ul>
