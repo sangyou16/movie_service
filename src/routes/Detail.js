@@ -32,7 +32,7 @@ function Detail() {
         <h4>{movies.description_intro}</h4>
         <p>Langauge of movie: {movies.language}</p>
         <p>Year of creation: {movies.year}</p>
-        <p>Rating: {movies.rating}</p>
+        <p>Ratings: {movies.rating}</p>
         <p>Genre:</p>
         <ul>
             {movies.genres.map((g) => (<li key = {movies.genres}>{g}</li>))} 
