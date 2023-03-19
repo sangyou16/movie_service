@@ -30,7 +30,7 @@ function Detail() {
         <img src = {movies.medium_cover_image}/>
         <h2>Introductions:</h2>
         <h4>{movies.description_intro}</h4>
-        <p>Langauge: {movies.language}</p>
+        <p>Langauge of movie: {movies.language}</p>
         <p>Year of creation: {movies.year}</p>
         <p>Rating: {movies.rating}</p>
         <p>Genre:</p>
